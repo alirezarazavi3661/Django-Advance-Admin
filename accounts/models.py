@@ -60,3 +60,24 @@ class User(AbstractBaseUser,PermissionsMixin):
     objects = UserManager()
     def __str__(self):
         return self.email
+
+
+
+
+class Profile(models.Model):
+    """
+    this model makes the profile which a user can access and change things
+    """
+    user = models.ForeignKey(User,on_delete = models.CASCADE)
+    first_name = models.CharField(max_length=255)
+    last_name = models.CharField(max_length=255)
+    image = models.ImageField(blank=True,null=True)
+    description = models.TextField()
+    created_date = models.DateField(auto_now_add=True)
+    updated_date = models.DateField(auto_now=True)
+
+    def __str__(self):
+        var = self.user.email
+        return var
+
+

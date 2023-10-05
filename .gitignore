@@ -153,3 +153,4 @@ cython_debug/
 accounts/migrations/0002_profile.py
 *.xml
 *.xml
+*.xml

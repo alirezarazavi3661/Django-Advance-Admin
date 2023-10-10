@@ -53,6 +53,7 @@ class User(AbstractBaseUser,PermissionsMixin):
     is_active = models.BooleanField(default=True)
     #is_verified = models.BooleanField(default=False)
     first_name = models.CharField(max_length=255)
+    last_name = models.CharField(max_length=255)
     groups = models.ManyToManyField(Group, blank=True, related_name='custom_users')
     user_permissions = models.ManyToManyField(Permission, blank=True, related_name='custom_users')
     USERNAME_FIELD = 'email'

@@ -10,6 +10,10 @@ from rest_framework.views import APIView
 from rest_framework.generics import ListCreateAPIView,RetrieveUpdateDestroyAPIView
 from rest_framework import mixins,viewsets
 from .permissions import IsOwnerOrReadOnly
+from django_filters.rest_framework import DjangoFilterBackend
+from rest_framework.filters import SearchFilter,OrderingFilter
+from .paginations import DefaultPagination
+
 
 
 
@@ -18,8 +22,12 @@ class PostModelViewSet(viewsets.ModelViewSet):
     permission_classes = [IsAuthenticatedOrReadOnly,IsOwnerOrReadOnly]
     serializer_class = PostSerializer
     queryset = Post.objects.filter(status=True)
-
-
+    filter_backends = [DjangoFilterBackend,SearchFilter,OrderingFilter]
+    filterset_fields = {'category':{'exact','in'},'author':{'exact'},'status':{'exact'}}
+    search_fields = ['title','$content']
+    # search_fields = ['^starts-with','=exact-match','@full-text-search','$regex-search']
+    ordering_fields = ['published_date']
+    pagination_class = DefaultPagination
 
 class CategoryModelViewSet(viewsets.ModelViewSet):
     permission_classes = [IsAuthenticatedOrReadOnly]

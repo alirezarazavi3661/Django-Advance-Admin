@@ -68,6 +68,23 @@ TEMPLATES = [
     },
 ]
 
+#setting the rest-framework permissions policy
+
+# REST_FRAMEWORK = {
+#     #"DEFAULT_PERMISSION_CLASSES":[
+#     #'rest_framework.permissions.IsAuthenticated',]
+#
+# }
+#
+REST_FRAMEWORK = {
+    'DEFAULT_SCHEMA_CLASS':'rest_framework.schemas.coreapi.AutoSchema'
+}
+
+
+
+
+
+
 WSGI_APPLICATION = 'core.wsgi.application'
 
 # Database

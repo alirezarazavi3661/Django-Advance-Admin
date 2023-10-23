@@ -36,10 +36,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'accounts',
-     'blog',
+    'blog',
     'rest_framework',
+    'rest_framework.authtoken',
     'django_filters',
     'drf_yasg',
+    'rest_framework_simplejwt',
+
 ]
 
 MIDDLEWARE = [
@@ -72,15 +75,21 @@ TEMPLATES = [
 
 #setting the rest-framework permissions policy
 
-# REST_FRAMEWORK = {
-#     #"DEFAULT_PERMISSION_CLASSES":[
-#     #'rest_framework.permissions.IsAuthenticated',]
-#
-# }
-#
 REST_FRAMEWORK = {
-    'DEFAULT_SCHEMA_CLASS':'rest_framework.schemas.coreapi.AutoSchema'
+    'DEFAULT_SCHEMA_CLASS':
+        'rest_framework.schemas.coreapi.AutoSchema',
+    "DEFAULT_AUTHENTICATION_CLASSES":[
+    'rest_framework.authentication.BasicAuthentication',
+    'rest_framework.authentication.SessionAuthentication',
+    'rest_framework.authentication.TokenAuthentication',
+    'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ]
+
 }
+
+# REST_FRAMEWORK = {
+#     'DEFAULT_SCHEMA_CLASS':'rest_framework.schemas.coreapi.AutoSchema'
+# }
 
 
 

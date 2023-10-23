@@ -154,3 +154,4 @@ accounts/migrations/0002_profile.py
 *.xml
 *.xml
 *.xml
+accounts/api/__init__.py

@@ -5,12 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9029a59-da7b-49dc-ae42-cedc22757643" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/blog/api/v1/permissions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/api/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/api/v1/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/api/v1/serializers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/api/v1/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/api/v1/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/api/v1/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/api/v1/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/api/v1/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/api/v1/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/api/v1/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/api/v1/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/urls.py" afterDir="false" />
     </list>
@@ -29,6 +31,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/blog/api/v1/permissions.py" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -52,7 +57,8 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;tasks&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -208,7 +214,12 @@
       <workItem from="1696876358445" duration="377000" />
       <workItem from="1696943785387" duration="7385000" />
       <workItem from="1697103170619" duration="32439000" />
-      <workItem from="1697531614368" duration="11418000" />
+      <workItem from="1697531614368" duration="12069000" />
+      <workItem from="1697618765978" duration="691000" />
+      <workItem from="1697619485275" duration="33000" />
+      <workItem from="1697619815373" duration="1347000" />
+      <workItem from="1697621215777" duration="23725000" />
+      <workItem from="1697985626947" duration="3731000" />
     </task>
     <servers />
   </component>
@@ -221,6 +232,10 @@
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/accounts/models.py</url>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/venv/Lib/site-packages/rest_framework/authtoken/serializers.py</url>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

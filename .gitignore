@@ -156,3 +156,4 @@ accounts/migrations/0002_profile.py
 *.xml
 accounts/api/__init__.py
 media/IMG_7839_11zon.jpg
+accounts/migrations/0006_user_is_verified.py

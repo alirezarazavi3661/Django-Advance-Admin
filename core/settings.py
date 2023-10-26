@@ -42,8 +42,8 @@ INSTALLED_APPS = [
     'django_filters',
     'drf_yasg',
     'rest_framework_simplejwt',
-
-]
+    "mail_templated",
+ ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -159,3 +159,14 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # user manager config
 AUTH_USER_MODEL = 'accounts.User'
+
+
+#email configuration
+#EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'localhost'  # SMTP4Dev is running on your local machine
+EMAIL_PORT = 25  # Default SMTP port used by SMTP4Dev
+EMAIL_USE_TLS = False
+EMAIL_USE_SSL = False  # You can set it to False
+EMAIL_HOST_USER = ''  # No authentication required
+EMAIL_HOST_PASSWORD = ''

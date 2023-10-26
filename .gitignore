@@ -155,3 +155,4 @@ accounts/migrations/0002_profile.py
 *.xml
 *.xml
 accounts/api/__init__.py
+media/IMG_7839_11zon.jpg

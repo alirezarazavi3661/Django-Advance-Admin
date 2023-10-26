@@ -19,8 +19,8 @@ class CustomUserAdmin(UserAdmin):
     """
     model = User
     #add_form = CustomUserCreationForm
-    list_display = ('email','first_name','is_superuser', 'is_active')
-    list_filter = ('email', 'is_superuser', 'is_active')
+    list_display = ('email','first_name','is_superuser', 'is_active',"is_verified")
+    list_filter = ('email', 'is_superuser', 'is_active',"is_verified")
     search_fields = ('email',)  # Corrected 'searching_fields' to 'search_fields'
     ordering = ('email',)
     fieldsets = (
@@ -28,7 +28,7 @@ class CustomUserAdmin(UserAdmin):
             "fields": ("email", "password"),
         }),
         ("Permissions", {
-            "fields": ("is_staff", "is_active", "is_superuser","first_name","last_name"),
+            "fields": ("is_staff", "is_active", "is_superuser","first_name","last_name","is_verified"),
         }),
         ("Group_Permissions", {
             "fields": ("groups","user_permissions"),
@@ -40,7 +40,7 @@ class CustomUserAdmin(UserAdmin):
     add_fieldsets = (
         (None, {
             "classes": ('wide',),
-            "fields": ('email', 'password1', 'password2', 'is_staff', 'is_active', 'is_superuser'),
+            "fields": ('email', 'password1', 'password2', 'is_staff', 'is_active', 'is_superuser',"is_verified"),
         }),
     )
 

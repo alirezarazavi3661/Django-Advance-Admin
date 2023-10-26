@@ -10,4 +10,11 @@ markdown
 django-filter
 drf-yasg[validation]
 
+
+
+
 # deployment modules
+
+
+#email third party modules
+django-mail-templated

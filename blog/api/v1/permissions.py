@@ -1,7 +1,6 @@
 from rest_framework import permissions
 
 
-
 class IsOwnerOrReadOnly(permissions.BasePermission):
     """
     object-level permissions to only allow owners of an object to edit it.
@@ -14,5 +13,5 @@ class IsOwnerOrReadOnly(permissions.BasePermission):
 
         if request.method in permissions.SAFE_METHODS:
             return True
-        #instance must have an attribute named 'owner'
-        return  obj.author.user == request.user
+        # instance must have an attribute named 'owner'
+        return obj.author.user == request.user

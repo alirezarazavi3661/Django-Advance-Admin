@@ -1,49 +1,44 @@
-from rest_framework.decorators import api_view,permission_classes,action
+from rest_framework.decorators import api_view, permission_classes, action
 from rest_framework.response import Response
-from .serializers import PostSerializer,CategorySerializer
-from ...models import Post,Category
+from .serializers import PostSerializer, CategorySerializer
+from ...models import Post, Category
 from rest_framework import status
 from django.shortcuts import get_object_or_404
 from rest_framework import status
-from rest_framework.permissions import IsAuthenticatedOrReadOnly,IsAdminUser,IsAuthenticated
+from rest_framework.permissions import (
+    IsAuthenticatedOrReadOnly,
+    IsAdminUser,
+    IsAuthenticated,
+)
 from rest_framework.views import APIView
-from rest_framework.generics import ListCreateAPIView,RetrieveUpdateDestroyAPIView
-from rest_framework import mixins,viewsets
+from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
+from rest_framework import mixins, viewsets
 from .permissions import IsOwnerOrReadOnly
 from django_filters.rest_framework import DjangoFilterBackend
-from rest_framework.filters import SearchFilter,OrderingFilter
+from rest_framework.filters import SearchFilter, OrderingFilter
 from .paginations import DefaultPagination
 
 
-
-
-
 class PostModelViewSet(viewsets.ModelViewSet):
-    permission_classes = [IsAuthenticated,IsOwnerOrReadOnly]
+    permission_classes = [IsAuthenticated, IsOwnerOrReadOnly]
     serializer_class = PostSerializer
     queryset = Post.objects.filter(status=True)
-    filter_backends = [DjangoFilterBackend,SearchFilter,OrderingFilter]
-    filterset_fields = {'category':{'exact','in'},'author':{'exact'},'status':{'exact'}}
-    search_fields = ['title','$content']
+    filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
+    filterset_fields = {
+        "category": {"exact", "in"},
+        "author": {"exact"},
+        "status": {"exact"},
+    }
+    search_fields = ["title", "$content"]
     # search_fields = ['^starts-with','=exact-match','@full-text-search','$regex-search']
-    ordering_fields = ['published_date']
+    ordering_fields = ["published_date"]
     pagination_class = DefaultPagination
-
 
 
 class CategoryModelViewSet(viewsets.ModelViewSet):
     permission_classes = [IsAuthenticatedOrReadOnly]
     serializer_class = CategorySerializer
     queryset = Category.objects.all()
-
-
-
-
-
-
-
-
-
 
     '''
     def get(self,request,*args,**kwargs):
@@ -67,12 +62,6 @@ class CategoryModelViewSet(viewsets.ModelViewSet):
         return self.destroy(request,*args,**kwargs)
 
     '''
-
-
-
-
-
-
 
 
 '''
@@ -113,7 +102,6 @@ class PostDetail(APIView):
 '''
 
 
-
 """
 @api_view(["GET","PUT","DELETE"])
 @permission_classes([IsAuthenticatedOrReadOnly])
@@ -131,8 +119,6 @@ def PostDetail(request,id):
         post.delete()
         return Response({"detail":"item removed successfully"},status = status.HTTP_204_NO_CONTENT)
 """
-
-
 
 
 """

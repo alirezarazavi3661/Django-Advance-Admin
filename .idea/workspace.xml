@@ -6,6 +6,25 @@
   <component name="ChangeListManager">
     <list default="true" id="e9029a59-da7b-49dc-ae42-cedc22757643" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/api/v1/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/api/v1/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/api/v1/urls/accounts.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/api/v1/urls/accounts.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/api/v1/urls/profiles.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/api/v1/urls/profiles.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/api/v1/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/api/v1/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/migrations/0005_user_last_name.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/migrations/0005_user_last_name.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/models/users.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/models/users.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/api/v1/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/api/v1/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/api/v1/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/api/v1/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/migrations/0002_alter_post_author.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/migrations/0002_alter_post_author.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -215,7 +234,9 @@
       <workItem from="1698070243684" duration="24036000" />
       <workItem from="1698307991879" duration="886000" />
       <workItem from="1698331565300" duration="9705000" />
-      <workItem from="1698675762565" duration="7778000" />
+      <workItem from="1698675762565" duration="8127000" />
+      <workItem from="1698738595597" duration="331000" />
+      <workItem from="1698739307111" duration="2171000" />
     </task>
     <servers />
   </component>

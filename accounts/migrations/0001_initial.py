@@ -23,7 +23,10 @@ class Migration(migrations.Migration):
                         verbose_name="ID",
                     ),
                 ),
-                ("password", models.CharField(max_length=128, verbose_name="password")),
+                (
+                    "password",
+                    models.CharField(max_length=128, verbose_name="password"),
+                ),
                 (
                     "last_login",
                     models.DateTimeField(
@@ -40,13 +43,17 @@ class Migration(migrations.Migration):
                 (
                     "groups",
                     models.ManyToManyField(
-                        blank=True, related_name="custom_users", to="auth.group"
+                        blank=True,
+                        related_name="custom_users",
+                        to="auth.group",
                     ),
                 ),
                 (
                     "user_permissions",
                     models.ManyToManyField(
-                        blank=True, related_name="custom_users", to="auth.permission"
+                        blank=True,
+                        related_name="custom_users",
+                        to="auth.permission",
                     ),
                 ),
             ],

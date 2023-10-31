@@ -17,7 +17,8 @@ class UserManager(BaseUserManager):
 
     def create_user(self, email, password, **extra_fields):
         """
-        Create amd save a new user with the given email and password and extra Data
+        Create amd save a new user with the
+        \given email and password and extra Data
         """
         if not email:
             raise ValueError(_("the email must be set"))
@@ -29,7 +30,8 @@ class UserManager(BaseUserManager):
 
     def create_superuser(self, email, password, **extra_fields):
         """
-        Create amd save a new superuser with the given email and password and extra Data
+        Create amd save a new superuser with the given email
+        and password and extra Data
         """
         extra_fields.setdefault("is_staff", True)
         extra_fields.setdefault("is_superuser", True)
@@ -56,7 +58,9 @@ class User(AbstractBaseUser, PermissionsMixin):
     is_verified = models.BooleanField(default=False)
     first_name = models.CharField(max_length=255)
     last_name = models.CharField(max_length=255)
-    groups = models.ManyToManyField(Group, blank=True, related_name="custom_users")
+    groups = models.ManyToManyField(
+        Group, blank=True, related_name="custom_users"
+    )
     user_permissions = models.ManyToManyField(
         Permission, blank=True, related_name="custom_users"
     )

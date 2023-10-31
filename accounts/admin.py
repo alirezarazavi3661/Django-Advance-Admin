@@ -19,9 +19,17 @@ class CustomUserAdmin(UserAdmin):
 
     model = User
     # add_form = CustomUserCreationForm
-    list_display = ("email", "first_name", "is_superuser", "is_active", "is_verified")
+    list_display = (
+        "email",
+        "first_name",
+        "is_superuser",
+        "is_active",
+        "is_verified",
+    )
     list_filter = ("email", "is_superuser", "is_active", "is_verified")
-    search_fields = ("email",)  # Corrected 'searching_fields' to 'search_fields'
+    search_fields = (
+        "email",
+    )  # Corrected 'searching_fields' to 'search_fields'
     ordering = ("email",)
     fieldsets = (
         (

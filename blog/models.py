@@ -1,7 +1,6 @@
 from django.db import models
-from django.contrib.auth import get_user_model
 from django.urls import reverse
-from accounts.models import Profile, User
+from accounts.models import Profile
 
 
 # getting user model object
